@@ -3481,6 +3481,12 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget source="session.CurrentService" render="Label" position="1030,693" size="250,24" font="Regular;16" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
 			<convert type="OpenEcmInfo">bitrate</convert>
 		</widget>
+		<widget source="session.CurrentService" render="Label" position="1030,693" size="85,24" font="Regular;16" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
+			<convert type="VNetSpeedInfo">RC</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1115,693" size="85,24" font="Regular;16" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
+			<convert type="VNetSpeedInfo">TM</convert>
+		</widget>
 		<widget source="session.CurrentService" render="FixedLabel" text="HBBTV" position="1115,665" size="50,22" zPosition="2" font="LCD;18" halign="center" foregroundColor="#00a1d1ff" backgroundColor="#000d0d0d" transparent="1">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide"/>
