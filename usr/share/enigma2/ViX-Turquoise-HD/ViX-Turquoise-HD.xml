@@ -3442,7 +3442,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 			<convert type="ServiceInfo">Is4K</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Label" zPosition="4" position="95,691" size="93,22" halign="center" valign="center" font="LCD;19" foregroundColor="#00a1d1ff" backgroundColor="#000b0b0b" transparent="1">
+		<widget source="session.CurrentService" render="Label" zPosition="4" position="95,691" size="100,22" halign="center" valign="center" font="LCD;19" foregroundColor="#00a1d1ff" backgroundColor="#000b0b0b" transparent="1">
 			<convert type="PliExtraInfo">ResolutionString</convert>
 		</widget>
 		<ePixmap position="412,559" zPosition="2" size="77,30" pixmap="icons/dolby_of.png" alphatest="on"/>
@@ -3472,23 +3472,26 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget source="session.CurrentService" render="Label" position="235,677" size="400,60" font="Regular;15" valign="top" halign="left" foregroundColor="#004ccbde" backgroundColor="#000b0b0b" transparent="1" zPosition="5">
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="283,693" size="250,24" font="Regular;16" valign="top" halign="right" foregroundColor="#00a1d1ff" backgroundColor="#000b0b0b" transparent="1" zPosition="5">
-			<convert type="PliExtraInfo">CryptoSpecial</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="613,693" size="460,20" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" font="Regular;16" halign="left" valign="top" zPosition="5" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="480,693" size="350,20" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" font="Regular;16" halign="left" valign="top" zPosition="5" transparent="1">
 			<convert type="PliExtraInfo">TransponderInfo</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="830,693" size="200,24" font="Regular;16" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
+			<convert type="VtiTempFan">AllInfo</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1030,693" size="250,24" font="Regular;16" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
+			<convert type="OpenEcmInfo">bitrate</convert>
 		</widget>
 		<widget source="session.CurrentService" render="FixedLabel" text="HBBTV" position="1115,665" size="50,22" zPosition="2" font="LCD;18" halign="center" foregroundColor="#00a1d1ff" backgroundColor="#000d0d0d" transparent="1">
 			<convert type="ServiceInfo">HasHBBTV</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1071,616" size="84,48" zPosition="2" font="LCD;34" valign="top" halign="right" foregroundColor="#00dcdcdc" backgroundColor="#00333333" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="1072,612" size="84,48" zPosition="2" font="LCD;34" valign="top" halign="right" foregroundColor="#00dcdcdc" backgroundColor="#00333333" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1125,622" size="62,45" zPosition="2" font="LCD;28" valign="top" halign="right" foregroundColor="#004ccbde" backgroundColor="#00333333" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="1126,618" size="62,45" zPosition="2" font="LCD;28" valign="top" halign="right" foregroundColor="#004ccbde" backgroundColor="#00333333" transparent="1">
 			<convert type="ClockToText">Format::%S</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1100,687" size="124,26" zPosition="2" font="LCD;22" halign="left" backgroundColor="#000d0d0d" foregroundColor="#00a1d1ff" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="1083,663" size="124,26" zPosition="2" font="LCD;22" halign="left" backgroundColor="#000d0d0d" foregroundColor="#00a1d1ff" transparent="1">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
 	</screen>
