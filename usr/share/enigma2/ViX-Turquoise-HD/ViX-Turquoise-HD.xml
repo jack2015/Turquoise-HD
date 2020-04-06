@@ -3472,19 +3472,19 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget source="session.CurrentService" render="Label" position="235,677" size="400,60" font="Regular;15" valign="top" halign="left" foregroundColor="#004ccbde" backgroundColor="#000b0b0b" transparent="1" zPosition="5">
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="480,693" size="350,20" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" font="Regular;16" halign="left" valign="top" zPosition="5" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="480,690" size="350,20" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" font="Regular;17" halign="left" valign="top" zPosition="5" transparent="1">
 			<convert type="PliExtraInfo">TransponderInfo</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="830,693" size="200,24" font="Regular;16" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
+		<widget source="session.CurrentService" render="Label" position="827,690" size="200,24" font="Regular;17" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
 			<convert type="VtiTempFan">AllInfo</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1030,693" size="250,24" font="Regular;16" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
+		<widget source="session.CurrentService" render="Label" position="1030,690" size="250,24" font="Regular;17" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
 			<convert type="OpenEcmInfo">bitrate</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1030,693" size="85,24" font="Regular;16" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
+		<widget source="session.CurrentService" render="Label" position="1030,690" size="85,24" font="Regular;17" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
 			<convert type="VNetSpeedInfo">RC</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1115,693" size="85,24" font="Regular;16" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
+		<widget source="session.CurrentService" render="Label" position="1115,690" size="85,24" font="Regular;17" valign="top" halign="left" backgroundColor="#000b0b0b" foregroundColor="#004ccbde" transparent="1" zPosition="5">
 			<convert type="VNetSpeedInfo">TM</convert>
 		</widget>
 		<widget source="session.CurrentService" render="FixedLabel" text="HBBTV" position="1115,665" size="50,22" zPosition="2" font="LCD;18" halign="center" foregroundColor="#00a1d1ff" backgroundColor="#000d0d0d" transparent="1">
