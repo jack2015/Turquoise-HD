@@ -3410,29 +3410,22 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget source="global.OnlineUnstableUpdateState" render="Pixmap" pixmap="icons/icon_unstableupdate.png" position="385,564" size="20,20" zPosition="5" alphatest="blend">
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<eLabel text="CPU" zPosition="2" position="740,561" foregroundColor="#0000fafa" backgroundColor="#0001030a" size="30,10" font="xRegular;10"/>
-		<widget source="session.CurrentService" render="Label" position="705,567" size="90,22" halign="center" valign="center" font="Regular;17" transparent="1" foregroundColor="#00f0f0f0" backgroundColor="#0001030a" zPosition="2">
+		<eLabel text="CPU" zPosition="2" position="776,567" foregroundColor="#0000fafa" backgroundColor="#0001030a" transparent="1" size="30,10" font="xRegular;10"/>
+		<widget source="session.CurrentService" render="Label" position="705,567" size="90,14" halign="center" valign="center" font="Regular;14" transparent="1" foregroundColor="#00f0f0f0" backgroundColor="#0001030a" zPosition="2">
 			<convert type="CpuUsage">$0</convert>
 		</widget>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/tuner.png" position="778,564" size="18,18" zPosition="2" alphatest="on">
 			<convert type="ClientsStreaming"/>
 			<convert type="ConditionalShowHide">Blink</convert>
 		</widget>
-		<widget source="session.FrontendStatus" render="Progress" position="822,570" size="130,5" zPosition="2" pixmap="icons/bar_snr.png" transparent="1">
+		<widget source="session.FrontendStatus" render="Progress" position="825,572" size="130,10" zPosition="2" pixmap="icons/bar_snr.png" transparent="1">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="session.FrontendStatus" render="Progress" position="822,578" size="130,5" zPosition="2" pixmap="icons/bar_snr.png" transparent="1">
-			<convert type="FrontendInfo">AGC</convert>
-		</widget>
-		<widget source="session.FrontendStatus" render="Label" position="971,562" zPosition="3" size="55,12" halign="left" font="Regular;14" foregroundColor="#00f0f0f0" transparent="1" backgroundColor="#00010309">
+		<widget source="session.FrontendStatus" render="Label" position="971,567" zPosition="3" size="55,14" halign="left" font="Regular;14" foregroundColor="#00f0f0f0" transparent="1" backgroundColor="#00010309">
 			<convert type="FrontendInfo">SNR</convert>
 		</widget>
-		<widget source="session.FrontendStatus" render="Label" position="971,573" zPosition="3" size="55,12" halign="left" font="Regular;14" foregroundColor="#00f0f0f0" transparent="1" backgroundColor="#00010309">
-			<convert type="FrontendInfo">AGC</convert>
-		</widget>
-		<eLabel text="SNR" zPosition="2" position="1015,563" foregroundColor="#0000fafa" backgroundColor="#00010309" transparent="1" size="22,10" font="Regular;12"/>
-		<eLabel text="AGC" zPosition="2" position="1015,574" foregroundColor="#0000fafa" backgroundColor="#00010309" transparent="1" size="22,10" font="Regular;12"/>
-		<!--widget source="session.FrontendStatus" render="Label" position="1030,566" zPosition="3" size="70,24" font="Regular;16" foregroundColor="#00f0f0f0" transparent="1" backgroundColor="#00010309">
+		<eLabel text="SNR" zPosition="2" position="1013,568" foregroundColor="#0000fafa" backgroundColor="#00010309" transparent="1" size="30,12" font="Regular;12"/>
+		<!--widget source="session.FrontendStatus" render="Label" position="1025,562" zPosition="3" size="70,24" font="Regular;16" foregroundColor="#00f0f0f0" transparent="1" backgroundColor="#00010309">
 			<convert type="FrontendInfo">BER</convert>
 		</widget-->
 		<widget source="session.CurrentService" render="FixedLabel" text="SUBSERVICES" position="105,672" zPosition="4" size="75,26" font="LCD;15" halign="center" valign="center" backgroundColor="#00000000" foregroundColor="#00a1d1ff" transparent="1">
@@ -3443,10 +3436,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 			<convert type="ServiceInfo">Is4K</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Label" zPosition="4" position="215,680" size="130,26" halign="center" valign="center" font="LCD;24" foregroundColor="#00f0f0f0" backgroundColor="#00000000" transparent="1">
-			<convert type="PliExtraInfo">ResolutionString</convert>
-		</widget>
-		<widget source="global.CurrentTime" render="Label" position="85,680" size="130,26" zPosition="2" font="LCD;24" halign="left" backgroundColor="#00000000d" foregroundColor="#00f0f0f0" transparent="1">
+		<widget source="global.CurrentTime" render="Label" position="85,685" size="115,26" zPosition="2" font="Regular;22" halign="left" backgroundColor="#00000000d" foregroundColor="#00f0f0f0" transparent="1">
 			<convert type="ClockToText">Format:%Y-%m-%d</convert>
 		</widget>
 		<ePixmap position="412,559" zPosition="2" size="77,30" pixmap="icons/dolby_of.png" alphatest="on"/>
@@ -3461,8 +3451,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		</widget>
 		<ePixmap position="569,559" zPosition="2" size="49,28" pixmap="icons/hd_off.png" alphatest="on"/>
 		<widget source="session.CurrentService" render="Pixmap" pixmap="icons/hd_on.png" position="569,559" size="49,28" zPosition="4" alphatest="on">
-			<convert type="ServiceInfo">VideoWidth</convert>
-			<convert type="ValueRange">721,1980</convert>
+			<convert type="ServiceInfo">IsHD</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
 		<ePixmap position="674,559" zPosition="2" size="49,28" pixmap="icons/ico_txt_off.png" alphatest="on"/>
@@ -3473,19 +3462,22 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 			<convert type="ServiceInfo">IsCrypted</convert>
 			<convert type="ConditionalShowHide"/>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="780,681" size="220,24" font="LCD;21" valign="top" halign="left" backgroundColor="#00000000" foregroundColor="#00f0f0f0" transparent="1" zPosition="5">
+		<widget source="session.CurrentService" render="Label" zPosition="4" position="200,685" font="Regular;18" size="150,24" halign="center" valign="center" foregroundColor="#00f0f0f0" backgroundColor="#00000000" transparent="1">
+			<convert type="PliExtraInfo">ResolutionString</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="780,685" size="220,24" font="Regular;18" valign="top" halign="left" backgroundColor="#00000000" foregroundColor="#00f0f0f0" transparent="1" zPosition="5">
 			<convert type="VtiTempFan">AllInfo</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1000,681" size="250,24" font="LCD;21" valign="top" halign="left" backgroundColor="#00000000" foregroundColor="#00f0f0f0" transparent="1" zPosition="5">
+		<widget source="session.CurrentService" render="Label" position="1000,685" size="250,24" font="Regular;18" valign="top" halign="left" backgroundColor="#00000000" foregroundColor="#00f0f0f0" transparent="1" zPosition="5">
 			<convert type="OpenEcmInfo">bitrate</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1010,681" size="85,24" font="LCD;21" valign="top" halign="left" backgroundColor="#00000000" foregroundColor="#00f0f0f0" transparent="1" zPosition="5">
+		<widget source="session.CurrentService" render="Label" position="1005,685" size="100,24" font="Regular;18" valign="top" halign="left" backgroundColor="#00000000" foregroundColor="#00f0f0f0" transparent="1" zPosition="5">
 			<convert type="VNetSpeedInfo">RC</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="1095,681" size="85,24" font="LCD;21" valign="top" halign="left" backgroundColor="#00000000" foregroundColor="#00f0f0f0" transparent="1" zPosition="5">
+		<widget source="session.CurrentService" render="Label" position="1105,685" size="100,24" font="Regular;18" valign="top" halign="left" backgroundColor="#00000000" foregroundColor="#00f0f0f0" transparent="1" zPosition="5">
 			<convert type="VNetSpeedInfo">TM</convert>
 		</widget>
-		<widget source="session.CurrentService" render="Label" position="420,681" size="350,24" font="LCD;21" backgroundColor="#00000000" foregroundColor="#00f0f0f0" halign="left" valign="top" zPosition="5" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="350,685" size="430,24" font="Regular;18" backgroundColor="#00000000" foregroundColor="#00f0f0f0" halign="center" valign="top" zPosition="5" transparent="1">
 			<convert type="PliExtraInfo">TransponderInfo</convert>
 		</widget>
 		<widget source="session.CurrentService" render="FixedLabel" text="HBBTV" position="1115,665" size="50,22" zPosition="2" font="LCD;18" halign="center" foregroundColor="#00a1d1ff" backgroundColor="#000d0d0d" transparent="1">
@@ -3515,23 +3507,7 @@ self[&quot;list&quot;].instance.resize(eSize(*listsize))
 		<widget name="key_blue" position="0,0" size="0,0" zPosition="1" transparent="1" valign="center" noWrap="1" backgroundColor="#00030303"/>
 		<widget name="epg_description" position="85,117" size="0,0" font="Regular;23" halign="left"	 zPosition="3" foregroundColor="#00f0f0f0" backgroundColor="#00333333" transparent="1"/>
 		<widget name="channel" position="0,0" size="0,0" font="Regular;29" halign="center" valign="center" zPosition="3" foregroundColor="#00f0f0f0" backgroundColor="#00333333" transparent="1"/>
-		<eLabel text="sid" position="345,527" size="30,15" font="LCD;13" backgroundColor="#00070707" halign="center" transparent="1" zPosition="3"/>
-		<widget source="session.CurrentService" render="Label" position="370,527" size="50,50" backgroundColor="#00070707" foregroundColor="#0000fafa" font="Regular;14" halign="left" valign="top" zPosition="5" transparent="1">
-			<convert type="ServiceInfo">Sid</convert>
-		</widget>
-		<eLabel text="pmt" position="345,538" size="30,15" font="LCD;13" halign="center" backgroundColor="#00070707" transparent="1" zPosition="3"/>
-		<widget source="session.CurrentService" render="Label" position="370,538" size="50,50" backgroundColor="#00070707" foregroundColor="#0000fafa" font="Regular;14" halign="left" valign="top" zPosition="5" transparent="1">
-			<convert type="ServiceInfo">PmtPid</convert>
-		</widget>
-		<eLabel text="audio" position="857,526" size="40,50" font="LCD;13" halign="center" backgroundColor="#00070707" transparent="1" zPosition="3"/>
-		<widget source="session.CurrentService" render="Label" position="892,526" size="50,50" backgroundColor="#00070707" foregroundColor="#0000fafa" font="Regular;14" halign="left" valign="top" zPosition="5" transparent="1">
-			<convert type="ServiceInfo">AudioPid</convert>
-		</widget>
-		<eLabel text="video" position="857,538" size="40,50" font="LCD;13" halign="center" backgroundColor="#00070707" transparent="1" zPosition="3"/>
-		<widget source="session.CurrentService" render="Label" position="892,538" size="50,50" backgroundColor="#00070707" foregroundColor="#0000fafa" font="Regular;14" halign="left" valign="top" zPosition="5" transparent="1">
-			<convert type="ServiceInfo">VideoPid</convert>
-		</widget>
-		<widget source="session.CurrentService" render="Label" position="80,468" size="400,60" font="LCD;21" valign="top" halign="left" foregroundColor="#00f0f0f0" backgroundColor="#00000000" transparent="1" zPosition="5">
+		<widget source="session.CurrentService" render="Label" position="80,468" size="400,60" font="Regular;18" valign="top" halign="left" foregroundColor="#00f0f0f0" backgroundColor="#00000000" transparent="1" zPosition="5">
 			<convert type="CryptoInfo">VerboseInfo</convert>
 		</widget>
 	</screen>
